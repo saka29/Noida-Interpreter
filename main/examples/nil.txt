@@ -1,0 +1,38 @@
+#Nil is a game where you take turns subtracting from something.
+#The player that gets it to 0 wins.
+#You can only subtract 1,2, or 3 at a time.
+#The computer will always win.
+new : n
+new : i
+new : c
+set : $n : .12
+print : [It's a fine day to play a game of Nil.]
+print : [You go first, carbonface.]
+{
+    input : int : $i
+    if : greater $i .3
+    {
+        print : [You cheater...]
+        print : [You can't fool me with your strange inputs!]
+        done
+    }
+    if : greater .1 $i
+    {
+        print : [You cheater...]
+        print : [You can't fool me with your strange inputs!]
+        done
+    }
+    set : $n : math $n - $i
+    set : $c : math .4 - $i
+    set : $n : math $n - $c
+    print : [I'll take...]
+    print : math .4 - $i
+    print : [Current left:]
+    print : $n
+    if : same $n .0
+    {
+        print : [Boom I won!]
+        done
+    }
+    repeat
+}
