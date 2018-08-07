@@ -1,0 +1,16 @@
+#A truth machine is a program that takes input 1 or 0.
+#If the input is 1, the program outputs "1" forever.
+#If the input is 0, the program outputs "0" and terminates.
+#See https://esolangs.org/wiki/Truth-machine
+new : i
+input : int : $i
+if : same $i .0
+{
+	print : .0
+	done
+}
+if : same $i .1
+{
+	print : .1
+	repeat
+}
