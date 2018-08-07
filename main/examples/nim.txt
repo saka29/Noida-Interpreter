@@ -1,4 +1,4 @@
-#Nil is a game where you take turns subtracting from something.
+#Nim is a game where you take turns subtracting from something.
 #The player that gets it to 0 wins.
 #You can only subtract 1,2, or 3 at a time.
 #The computer will always win.
